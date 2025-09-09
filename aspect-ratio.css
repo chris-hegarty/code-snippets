@@ -1,0 +1,51 @@
+/* Using plain CSS*/
+
+/* Make sure to put the image in a container...usually a <picture> tag, but be <figure> or even just <div> */
+/* This one has a class of .brand-logo */
+
+.brand-logo {
+  /* Set the aspect ratio and object-fit on the wrapper. 4/3 and 16/9 are common ones*/
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  /* Use flexbox to make sure the image is horiz and vert centered in the wrapper:*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.brand-logo img {
+  /* Always set width 100% and height auto*/
+  /* These settings will adjust according to the wrapper container.*/
+  width: 100%;
+  height: auto;
+}
+
+/* Here we just give it some more padding at larger screen sizes.*/
+@media screen and (min-width: 768px) {
+  .brand-logo {
+    padding: 40px;
+  }
+}
+
+/* Using SASS*/
+
+.brand-logo {
+  /* Set the aspect ratio and object-fit on the wrapper. 4/3 and 16/9 are common ones*/
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  /* Use flexbox to make sure the image is horiz and vert centered in the wrapper:*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+  img {
+    /* Always set width 100% and height auto*/
+    /* These settings will adjust according to the wrapper container.*/
+    width: 100%;
+    height: auto;
+  }
+}
