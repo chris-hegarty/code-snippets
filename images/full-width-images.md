@@ -1,0 +1,18 @@
+
+
+```css
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.full-width {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  width: 100vw;
+}
+```
