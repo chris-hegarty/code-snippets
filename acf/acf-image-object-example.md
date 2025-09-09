@@ -1,0 +1,108 @@
+# ACF Image Object example
+
+Everything the ACF image object returns:
+
+```html
+
+<pre>array(24) {
+  ["ID"]=&gt;
+  int(211)
+  ["id"]=&gt;
+  int(211)
+  ["title"]=&gt;
+  string(3) "ogc"
+  ["filename"]=&gt;
+  string(22) "ogc-e1694729100286.png"
+  ["filesize"]=&gt;
+  int(2453530)
+  ["url"]=&gt;
+  string(78) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286.png"
+  ["link"]=&gt;
+  string(38) "https://brand-careers.local/home/ogc/"
+  ["alt"]=&gt;
+  string(0) ""
+  ["author"]=&gt;
+  string(1) "2"
+  ["description"]=&gt;
+  string(0) ""
+  ["caption"]=&gt;
+  string(0) ""
+  ["name"]=&gt;
+  string(3) "ogc"
+  ["status"]=&gt;
+  string(7) "inherit"
+  ["uploaded_to"]=&gt;
+  int(7)
+  ["date"]=&gt;
+  string(19) "2023-09-14 00:17:45"
+  ["modified"]=&gt;
+  string(19) "2023-09-14 22:04:26"
+  ["menu_order"]=&gt;
+  int(0)
+  ["mime_type"]=&gt;
+  string(9) "image/png"
+  ["type"]=&gt;
+  string(5) "image"
+  ["subtype"]=&gt;
+  string(3) "png"
+  ["icon"]=&gt;
+  string(65) "https://brand-careers.local/wp-includes/images/media/default.png"
+  ["width"]=&gt;
+  int(1186)
+  ["height"]=&gt;
+  int(840)
+  ["sizes"]=&gt;
+  array(24) {
+    ["thumbnail"]=&gt;
+    string(86) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-150x150.png"
+    ["thumbnail-width"]=&gt;
+    int(150)
+    ["thumbnail-height"]=&gt;
+    int(150)
+    ["medium"]=&gt;
+    string(86) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-300x212.png"
+    ["medium-width"]=&gt;
+    int(300)
+    ["medium-height"]=&gt;
+    int(212)
+    ["medium_large"]=&gt;
+    string(86) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-768x544.png"
+    ["medium_large-width"]=&gt;
+    int(768)
+    ["medium_large-height"]=&gt;
+    int(544)
+    ["large"]=&gt;
+    string(87) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-1024x725.png"
+    ["large-width"]=&gt;
+    int(1024)
+    ["large-height"]=&gt;
+    int(725)
+    ["1536x1536"]=&gt;
+    string(73) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-1536x1216.png"
+    ["1536x1536-width"]=&gt;
+    int(1536)
+    ["1536x1536-height"]=&gt;
+    int(1216)
+    ["2048x2048"]=&gt;
+    string(78) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286.png"
+    ["2048x2048-width"]=&gt;
+    int(1186)
+    ["2048x2048-height"]=&gt;
+    int(840)
+    ["gb-block-post-grid-landscape"]=&gt;
+    string(86) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-600x400.png"
+    ["gb-block-post-grid-landscape-width"]=&gt;
+    int(600)
+    ["gb-block-post-grid-landscape-height"]=&gt;
+    int(400)
+    ["gb-block-post-grid-square"]=&gt;
+    string(86) "https://brand-careers.local/wp-content/uploads/2023/09/ogc-e1694729100286-600x600.png"
+    ["gb-block-post-grid-square-width"]=&gt;
+    int(600)
+    ["gb-block-post-grid-square-height"]=&gt;
+    int(600)
+  }
+}
+</pre>
+
+```

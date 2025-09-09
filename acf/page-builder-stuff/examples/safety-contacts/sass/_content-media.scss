@@ -1,0 +1,41 @@
+.content-media {
+	.container:first-child {
+		padding-left: 0;
+	}
+
+	.sc-text {
+		max-width: 75%;
+	}
+
+	.column-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: .5rem;
+			box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.8);
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
+		}
+	}
+
+	.media-right {
+		flex-direction: row;
+
+		.column-content {
+			//padding: 40px 0;
+		}
+	}
+
+	.media-left {
+		flex-direction: row-reverse;
+
+		.column-content {
+			//padding: 40px;
+		}
+	}
+}
+

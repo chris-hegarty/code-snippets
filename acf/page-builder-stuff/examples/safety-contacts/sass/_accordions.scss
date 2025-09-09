@@ -1,0 +1,55 @@
+.accordions {
+
+	h2:not(.section-heading),
+	h3 {
+		font-size: 1rem;
+		font-family: $font__main;
+		font-weight: $font__weight--main-heading;
+	}
+
+	.accordion {
+		padding: 8px 0;
+		@media screen and (min-width: 992px) {
+			width: 75%;
+		}
+
+		.accordion-item {
+			border-radius: 0;
+		}
+
+		.accordion-header {
+			.accordion-button {
+				border-radius: 0;
+				box-shadow: none;
+
+				//&::before {
+				//	font-family: FontAwesome !important;
+				//	content: "\f054";
+				//	border: 0;
+				//	background-image: none;
+				//	display: flex;
+				//	justify-content: center;
+				//	align-items: center;
+				//	transform: rotate(0deg);
+				//	transition: transform 0.2s ease-in-out;
+				//	margin-right: 10px;
+				//	width: .8rem;
+				//	height: .8rem;
+				//	font-size: .8rem;
+				//}
+
+				//&:not(.collapsed) {
+				//
+				//	&::before {
+				//		transform: rotate(90deg);
+				//	}
+				//}
+
+				//&::after {
+				//	background-image: none;
+				//}
+			}
+		}
+	}
+}
+
