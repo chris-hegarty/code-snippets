@@ -195,7 +195,7 @@ function kwd_get_posts_by_parent_terms($post_id, $taxonomy = 'tax_markets', $cou
 /**
  * Create hierarchical term select field based on post type
  * 
- * @param string $post_type The post type to build fields for
+ * @param string $post_type The post type to tooling fields for
  */
 function kwd_build_term_filter_fields($post_type = 'project') {
     // Get taxonomies for this post type

@@ -1,4 +1,4 @@
-```css
+```scss
 
 // stylelint-disable number-max-precision, rem-over-px/rem-over-px
 @mixin button() {

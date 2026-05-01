@@ -31,10 +31,10 @@ For a plugin, it looks like:
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_ktg_blocks_init() {
-	register_block_type( __DIR__ . '/build/generic-hero' );
-	register_block_type( __DIR__ . '/build/additional-block' );
-	register_block_type( __DIR__ . '/build/third-block' );
-	register_block_type( __DIR__ . '/build/content-media' );
+	register_block_type( __DIR__ . '/tooling/generic-hero' );
+	register_block_type( __DIR__ . '/tooling/additional-block' );
+	register_block_type( __DIR__ . '/tooling/third-block' );
+	register_block_type( __DIR__ . '/tooling/content-media' );
 }
 add_action( 'init', 'create_block_ktg_blocks_init' );
 ```

@@ -7,6 +7,7 @@
 	.standard-column {
 		display: flex;
 		flex-direction: column;
+    flex: 0 1 250px;
 	}
 	.column-wrapper {
 		display: flex;

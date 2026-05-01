@@ -4,7 +4,7 @@
      *
      * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
      *
-     * @package KiewitDev
+     * @package brandDev
      */
 
     //If no alt tag is set for images, this will grab and use the title:

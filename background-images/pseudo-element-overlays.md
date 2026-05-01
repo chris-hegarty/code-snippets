@@ -1,5 +1,7 @@
 # Background overlays with pseudo elements
 
+More info: https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+
 ```css
 div::before{
       content: '';
