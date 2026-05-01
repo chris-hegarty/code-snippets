@@ -176,8 +176,68 @@ input[type="search"] {
   }
 }
 
-```css
+```
 
+Another JS example:
 
+```js
+
+$(document).ready(function () {
+const $searchBtn = $(".search-component__button button");
+const $searchForm = $('.search-component__form input[type=search]');
+const $searchFieldset = $('.search-component__form fieldset');
+const searchWidth = 300;
+let isAnimating = false;
+
+// Expand search
+function expandSearch() {
+if (isAnimating) return;
+isAnimating = true;
+
+    $searchBtn.parent(".search-component__button").hide();
+    $('.nav-item.dropdown').hide();
+    $('.search-component__form').show();
+    
+    $searchFieldset.animate({
+      width: '+=' + searchWidth
+    }, 300, function() {
+      isAnimating = false;
+      $searchForm.focus();
+    });
+}
+
+// Collapse search
+function collapseSearch() {
+if (isAnimating) return;
+isAnimating = true;
+
+    $searchFieldset.animate({
+      width: '-=' + searchWidth
+    }, 300, function() {
+      $('.search-component__form').hide();
+      $('.search-component__button').show();
+      $('.nav-item.dropdown').show();
+      isAnimating = false;
+    });
+}
+
+// Event handlers
+$searchBtn.on('click', function (e) {
+e.preventDefault();
+expandSearch();
+});
+
+$searchForm.on('blur', function () {
+collapseSearch();
+});
+
+// Keyboard support
+$searchForm.on('keydown', function(e) {
+if (e.key === 'Escape') {
+collapseSearch();
+}
+});
+});
 
 ```
+

@@ -7,7 +7,7 @@
     data-services="<?php echo implode(',',$services); ?>" 
     data-limit="<?php echo $limit; ?>" 
     data-page="<?php echo $page; ?>" 
-    data-total="<?php echo kiewit_count_projects( $market, $submarket, $services ); ?>">
+    data-total="<?php echo brand_count_projects( $market, $submarket, $services ); ?>">
 ```
 
 Use in JavaScript:
@@ -41,6 +41,10 @@ Use in JavaScript:
 
 ```
 
+## Data attributes with SASS and CSS variables
+
+SASS cannot dynamically change a variable value based on HTML attributes at run time.
+
 
 
 
@@ -64,7 +68,7 @@ Full scripts:
 ```php
 //Set up data attributes in HTML
  ?>
-    <div class="projects__display" data-market="<?php echo $market; ?>" data-submarket="<?php echo $submarket; ?>" data-services="<?php echo implode(',',$services); ?>" data-limit="<?php echo $limit; ?>" data-page="<?php echo $page; ?>" data-total="<?php echo kiewit_count_projects( $market, $submarket, $services ); ?>">
+    <div class="projects__display" data-market="<?php echo $market; ?>" data-submarket="<?php echo $submarket; ?>" data-services="<?php echo implode(',',$services); ?>" data-limit="<?php echo $limit; ?>" data-page="<?php echo $page; ?>" data-total="<?php echo brand_count_projects( $market, $submarket, $services ); ?>">
     <?php
     $counter = 0;
     
@@ -83,7 +87,7 @@ Full scripts:
 
             <div class="col-sm-12 col-md-4">
                 <div class="card projects__project<?php echo (is_front_page() ? ' projects__project--home' : ''); ?><?php echo (is_front_page() ? ' animated' : ''); ?>" data-id="<?php echo $project->ID; ?>">
-                    <a class="projects__photo" href="<?php echo get_permalink($project->ID); ?>" style="background-image: url('<?php echo kiewit_convert_attachment_format( wp_get_attachment_image_src( $photos[0], 'medium_large' )[0], '768px'); ?>')">
+                    <a class="projects__photo" href="<?php echo get_permalink($project->ID); ?>" style="background-image: url('<?php echo brand_convert_attachment_format( wp_get_attachment_image_src( $photos[0], 'medium_large' )[0], '768px'); ?>')">
                         <div class="projects__info">
                             <h4><?php echo $project->post_title; ?></h4>
                             <p><?php echo trim(get_post_meta( $project->ID, 'project_location_city', true )); ?>, <?php echo trim(get_post_meta( $project->ID, 'project_location_state', true )); ?></p>

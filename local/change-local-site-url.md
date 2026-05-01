@@ -1,6 +1,6 @@
 # How to Change the Site URL in Local by Flywheel using WP-CLI
 
-If you need to change the Site URL for a WordPress project running in [Local by Flywheel](https://localwp.com/), you can do so safely using WP-CLI. This guide will walk you through updating the URL from `kiewit-v2-dev.local` to `kiewitv2.local`.
+If you need to change the Site URL for a WordPress project running in [Local by Flywheel](https://localwp.com/), you can do so safely using WP-CLI. This guide will walk you through updating the URL from `brand-v2-dev.local` to `brandv2.local`.
 
 ---
 
@@ -9,7 +9,7 @@ If you need to change the Site URL for a WordPress project running in [Local by 
 - Local by Flywheel installed and running
 - The site is already set up in Local
 - WP-CLI available (installed by default on Local sites)
-- The new URL (`kiewitv2.local`) is configured in Local
+- The new URL (`brandv2.local`) is configured in Local
 - **If your site's `wp-content` folder is under version control (e.g., Git), ensure you have committed or stashed any changes before starting this process.**
 
 ---
@@ -19,9 +19,9 @@ If you need to change the Site URL for a WordPress project running in [Local by 
 ### 1. Change the Site Domain in Local
 
 1. **Open Local by Flywheel.**
-2. **Select your site** (`kiewit-v2-dev.local`) in the sidebar.
+2. **Select your site** (`brand-v2-dev.local`) in the sidebar.
 3. Click the **"Site Domain"** (or "Change" next to the site domain).
-4. Enter the new domain name: `kiewitv2.local`.
+4. Enter the new domain name: `brandv2.local`.
 5. Click **"Change Domain"**.
     - Local will prompt you to update your hosts file and restart the site. Confirm and wait for the process to complete.
 
@@ -37,7 +37,7 @@ Even after changing the domain in Local, WordPress may still reference the old U
 2. **Run the following WP-CLI command:**
 
     ```bash
-    wp search-replace 'kiewit-v2-dev.local' 'kiewitv2.local' --skip-columns=guid
+    wp search-replace 'brand-v2-dev.local' 'brandv2.local' --skip-columns=guid
     ```
 
     - This command will replace all instances of the old URL with the new one in the database, except for the `guid` column, which should not be changed for existing content.
@@ -55,18 +55,18 @@ If your site's `wp-content` is under version control (such as Git):
 
     ```bash
     cd app/public/wp-content
-    grep -r 'kiewit-v2-dev.local' .
+    grep -r 'brand-v2-dev.local' .
     ```
 
-    - If any files reference the old domain, update them to use `kiewitv2.local` and commit your changes.
+    - If any files reference the old domain, update them to use `brandv2.local` and commit your changes.
 
 ---
 
 ### 4. Verify the Update
 
-- Open your browser and go to [http://kiewitv2.local](http://kiewitv2.local).
+- Open your browser and go to [http://brandv2.local](http://brandv2.local).
 - Log in to the WordPress admin dashboard and check:
-    - **Settings > General**: Both "WordPress Address (URL)" and "Site Address (URL)" should show `kiewitv2.local`.
+    - **Settings > General**: Both "WordPress Address (URL)" and "Site Address (URL)" should show `brandv2.local`.
     - Frontend and backend links work as expected.
 - Check for broken images, links, or redirects that still use the old URL.
 

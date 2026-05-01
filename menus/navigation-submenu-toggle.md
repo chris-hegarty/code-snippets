@@ -1,5 +1,5 @@
 # Navigation with submenu slide toggle example
-
+[acf](../acf)
 If you need top level menu items to slide toggle on hover:
 
 -Find the list items that have .sub-menu children
@@ -14,23 +14,7 @@ If you need top level menu items to slide toggle on hover:
 
 This method traverse downwards along descendants of DOM elements, all the way down to the last descendant. 
 
-## .children()
-
 To only traverse a single level down the DOM tree (to return direct children), use the `.children()` method.
-
-## .parent()
-
-This method traverses up the DOM tree to return the direct parent of the selected element.
-
-## .parents()
-
-The `.parents()` method traverses up the DOM tree to return ALL ancestor elements of the selected element, optionally 
-filtered by a selector. For example:
-
-```js
-$(e.target).parents('.sub-menu')
-```
-This will traverse up the DOM tree and return all ancestor elements of the selected element that match the `.sub-menu` selector.
 
 ```javascript
 $('#header-nav li:has(.sub-menu)').hover(function (event) {
@@ -65,12 +49,7 @@ wp_nav_menu(
 );
 
 ```
-Then, the Javascript looks like this.
-
-Note: Here, `.closest` is used to ensure that the slideToggle effect is applied to the ul element that is a 
-descendant of the closest .menu-item-has-children ancestor of the clicked element. 
-
-This helps in toggling the visibility of the submenu associated with the clicked caret icon.
+Then, the Javascript looks like this:
 
 ```javascript
 $('#header-nav li:has(.sub-menu) i').click(function (event) {
@@ -141,11 +120,9 @@ The CSS looks like this:
     display: none;
   }
 }
-```
 
-Some styling comes baked into Underscores.
-You may need to adjust this.
-```scss
+//Some styling that comes baked into Underscores.
+//You may need to strip this out of the main stylesheet.
 
 #header-nav {
   position: relative;
@@ -181,14 +158,8 @@ You may need to adjust this.
       }
     }
   }
-}
- ```
-
-Here is where we animate the carets.
-The tricky part with Font Awesome is to transition both the i or span element AND its pseudo element.
-
-```scss
-
+//Here is where we animate the carets.
+//The tricky part with Font Awesome is to transition both the i or span element AND its pseudo element.
 
   .menu-item-has-children {
     display: flex;
@@ -226,6 +197,7 @@ The tricky part with Font Awesome is to transition both the i or span element AN
     width: 100%;
     box-shadow: 0 8px 16px rgba(0,0,0,0.8);
   }
+}
 
 ```
 
