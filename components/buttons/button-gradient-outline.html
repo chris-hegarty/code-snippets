@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button with gradient border</title>
+    <style>
+        :root, html, body {
+            height: 100vh;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 auto;
+        }
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0turn;
+            inherits: true;
+        }
+        @keyframes rotate {
+            to {
+                --angle: 1turn;
+            }
+        }
+        button {
+            font: inherit;
+            color: black;
+            padding: .5em 1.25em;
+            border: 2px solid transparent;
+            border-radius: 1rem;
+            background: linear-gradient(white, white) padding-box,
+            conic-gradient(from var(--angle), red, blue, red) border-box;
+        }
+        button:hover, button:focus-visible {
+            animation: rotate 3s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Button with gradient border</h1>
+    </header>
+    <main>
+        <button>Button Text</button>
+    </main>
+    <footer>
+        <p>September 2025.</p>
+    </footer>
+</body>
+</html>

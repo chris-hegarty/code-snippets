@@ -342,7 +342,7 @@ function start_lvl(&output, $depth=0, $args=array()){
     
     $class_names = implode('', $classes);
     
-    // Now use &$output to build the HTML:
+    // Now use &$output to tooling the HTML:
     
     $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
 }

@@ -12,7 +12,7 @@ For jQuery:
 
 ```
 
-Vanilla JS:
+
 
 ```javascript
 
@@ -21,14 +21,4 @@ Vanilla JS:
     } );
 
 
-```
-
-Test if jQuery is loaded on the page:
-
-```javascript
-  if (typeof jQuery == 'undefined') {
-    console.log("jQuery is not loaded");
-  } else {
-    console.log("jQuery is loaded");
-  }
 ```

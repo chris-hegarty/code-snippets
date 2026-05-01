@@ -5,7 +5,7 @@
 $background_color = get_field('background_color') ?: '';
 $text_color       = get_field('color') ?: '';
 
-//Then build the styles into an array
+//Then tooling the styles into an array
 //implode them and save into one variable
 
 $styles = array('background-color: ' . $background_color, 'color: ' . $text_color);

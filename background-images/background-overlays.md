@@ -2,6 +2,9 @@
 
 Resources:
 
+Background Image techniques:
+https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+
 Hero generator:
 https://hero-generator.netlify.app/?ref=undesign
 
